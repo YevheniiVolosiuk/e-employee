@@ -13,7 +13,7 @@ return new class extends Migration {
         Schema::create('states', function (Blueprint $table) {
             $table->id();
             $table->foreignId('country_id')->constrained();
-            $table->string('name');
+            $table->string('name', 60);
             $table->timestamps();
             $table->softDeletes();
         });
